@@ -6,12 +6,12 @@ services:
     image: docker:dind
     ports:
       - "3000:3000"
-      - "5000:5000"
+      - "5001:5001"
     privileged: true
     volumes:
        - jenkins-docker-certs:/certs/client
        - jenkins-data:/var/jenkins_home
-       - $HOME:/home
+       - $HOME:/Users/josecarlosribas
     restart: always
     environment:
        DOCKER_TLS_CERTDIR: "/certs"
